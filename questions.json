@@ -1,0 +1,610 @@
+{
+  "qa": [
+    { "book": "best_buddies", "type": "qa", "question": "Scratch and Sniff smell something yummy.", "options": ["True (正確)", "False (錯誤)"], "answer": 0 },
+    { "book": "best_buddies", "type": "qa", "question": "Scratch and Sniff jump high and see a pie.", "options": ["True (正確)", "False (錯誤)"], "answer": 0 },
+    { "book": "best_buddies", "type": "qa", "question": "Scratch and Sniff give up eating the pie.", "options": ["True (正確)", "False (錯誤)"], "answer": 1 },
+    { "book": "best_buddies", "type": "qa", "question": "The pie is for Scratch and Sniff.", "options": ["True (正確)", "False (錯誤)"], "answer": 1 },
+    { "book": "best_buddies", "type": "qa", "question": "Sniff and Scratch see a box in the yard.", "options": ["True (正確)", "False (錯誤)"], "answer": 0 },
+    { "book": "best_buddies", "type": "qa", "question": "Scratch and Sniff both love the box.", "options": ["True (正確)", "False (錯誤)"], "answer": 1 },
+    { "book": "best_buddies", "type": "qa", "question": "Scratch is stuck in the box.", "options": ["True (正確)", "False (錯誤)"], "answer": 0 },
+    { "book": "best_buddies", "type": "qa", "question": "At the end, Scratch and Sniff don't like the box.", "options": ["True (正確)", "False (錯誤)"], "answer": 1 },
+    { "book": "best_buddies", "type": "qa", "question": "Sniff and Scratch think they see a new room.", "options": ["True (正確)", "False (錯誤)"], "answer": 0 },
+    { "book": "best_buddies", "type": "qa", "question": "There are two cats and two dogs in the room.", "options": ["True (正確)", "False (錯誤)"], "answer": 1 },
+    { "book": "best_buddies", "type": "qa", "question": "Sniff and Scratch are happy to meet new friends.", "options": ["True (正確)", "False (錯誤)"], "answer": 1 },
+    { "book": "best_buddies", "type": "qa", "question": "The new thing is actually a mirror.", "options": ["True (正確)", "False (錯誤)"], "answer": 0 },
+
+    { "book": "bumble_and_bee", "type": "qa", "question": "____ in leaves was so much fun! Bumble.", "options": ["Jumping", "Wish", "Paint", "List"], "answer": 0 },
+    { "book": "bumble_and_bee", "type": "qa", "question": "I will look at our ____!", "options": ["list", "paint", "wish", "pumpkin"], "answer": 0 },
+    { "book": "bumble_and_bee", "type": "qa", "question": "We ____ for a pumpkin!!!", "options": ["wish", "list", "paint", "jump"], "answer": 0 },
+    { "book": "bumble_and_bee", "type": "qa", "question": "We turned Froggy into a ____!", "options": ["pumpkin", "list", "wish", "pie"], "answer": 0 },
+    { "book": "bumble_and_bee", "type": "qa", "question": "Let's carve and ____ them!", "options": ["paint", "wish", "list", "jump"], "answer": 0 },
+    { "book": "bumble_and_bee", "type": "qa", "question": "I am about to ____ my famous apple pie!", "options": ["bake", "forget", "get", "butter"], "answer": 0 },
+    { "book": "bumble_and_bee", "type": "qa", "question": "Do not worry. We will ____ the butter.", "options": ["get", "bake", "forget", "pie"], "answer": 0 },
+    { "book": "bumble_and_bee", "type": "qa", "question": "And we will not ____!", "options": ["forget", "bake", "get", "butter"], "answer": 0 },
+    { "book": "bumble_and_bee", "type": "qa", "question": "Maybe I should write down ____?", "options": ["butter", "pie", "bake", "forget"], "answer": 0 },
+    { "book": "bumble_and_bee", "type": "qa", "question": "Everything you need to bake your ____!", "options": ["pie", "butter", "get", "bake"], "answer": 0 },
+    { "book": "bumble_and_bee", "type": "qa", "question": "____ is almost here. I can feel it in the air.", "options": ["Winter", "Room", "Friends", "Practice"], "answer": 0 },
+    { "book": "bumble_and_bee", "type": "qa", "question": "It is my ____ season.", "options": ["favorite", "winter", "room", "practice"], "answer": 0 },
+    { "book": "bumble_and_bee", "type": "qa", "question": "I am not very good, but I have all winter to ____!", "options": ["practice", "room", "favorite", "friends"], "answer": 0 },
+    { "book": "bumble_and_bee", "type": "qa", "question": "There is not enough ____!", "options": ["room", "practice", "favorite", "winter"], "answer": 0 },
+    { "book": "bumble_and_bee", "type": "qa", "question": "There is always room for marshmallows and ____!", "options": ["friends", "practice", "winter", "room"], "answer": 0 },
+    { "book": "bumble_and_bee", "type": "qa", "question": "Bumble, do you want to ____ guess the animal?", "options": ["play", "animal", "cow", "game"], "answer": 0 },
+    { "book": "bumble_and_bee", "type": "qa", "question": "What ____ should I pretend to be?", "options": ["animal", "game", "cow", "play"], "answer": 0 },
+    { "book": "bumble_and_bee", "type": "qa", "question": "Bumble is pretending to be a ____!", "options": ["cow", "animal", "game", "play"], "answer": 0 },
+    { "book": "bumble_and_bee", "type": "qa", "question": "I am very good at this ____!", "options": ["game", "cow", "animal", "play"], "answer": 0 },
+    { "book": "bumble_and_bee", "type": "qa", "question": "Get ready to ____!", "options": ["guess", "play", "game", "cow"], "answer": 0 },
+    { "book": "bumble_and_bee", "type": "qa", "question": "I am ____ Silly-Stinger!", "options": ["Pirate", "Key", "Map", "Treasure"], "answer": 0 },
+    { "book": "bumble_and_bee", "type": "qa", "question": "I wonder what the sweet ____ is?", "options": ["treasure", "key", "map", "pirate"], "answer": 0 },
+    { "book": "bumble_and_bee", "type": "qa", "question": "This is a treasure ____.", "options": ["map", "key", "ice cream", "pirate"], "answer": 0 },
+    { "book": "bumble_and_bee", "type": "qa", "question": "And you will need this ____.", "options": ["key", "map", "ice cream", "treasure"], "answer": 0 },
+    { "book": "bumble_and_bee", "type": "qa", "question": "____ is also a sweet treasure.", "options": ["Ice cream", "Key", "Map", "Pirate"], "answer": 0 },
+
+    { "book": "fairylight_friends", "type": "qa", "question": "Ruby, Iris, and Pip were (wand / fairy) friends.", "options": ["fairy", "wand"], "answer": 0 },
+    { "book": "fairylight_friends", "type": "qa", "question": "What kind of (magic / fairy) do I have?", "options": ["magic", "fairy"], "answer": 0 },
+    { "book": "fairylight_friends", "type": "qa", "question": "Iris produced a ____!", "options": ["flower", "rainbow"], "answer": 0 },
+    { "book": "fairylight_friends", "type": "qa", "question": "Ruby produced a ____!", "options": ["lightning bolt", "fairy"], "answer": 0 },
+    { "book": "fairylight_friends", "type": "qa", "question": "Pip produced a ____!", "options": ["rainbow", "flower"], "answer": 0 },
+    { "book": "fairylight_friends", "type": "qa", "question": "Hello, Pip! I'm baking a ____.", "options": ["cake", "batter", "flour", "eggs"], "answer": 0 },
+    { "book": "fairylight_friends", "type": "qa", "question": "Will you help me sift the ____?", "options": ["flour", "batter", "oven", "eggs"], "answer": 0 },
+    { "book": "fairylight_friends", "type": "qa", "question": "She put the pan into the ____.", "options": ["oven", "flour", "batter", "cake"], "answer": 0 },
+    { "book": "fairylight_friends", "type": "qa", "question": "Will you help me beat the ____?", "options": ["batter", "oven", "eggs", "flour"], "answer": 0 },
+    { "book": "fairylight_friends", "type": "qa", "question": "Ruby cracked the ____.", "options": ["eggs", "batter", "flour", "oven"], "answer": 0 },
+    { "book": "fairylight_friends", "type": "qa", "question": "Hello, Iris! I planted (petals / seeds).", "options": ["seeds", "petals"], "answer": 0 },
+    { "book": "fairylight_friends", "type": "qa", "question": "Iris and Pip watched the (sun / soil).", "options": ["soil", "sun"], "answer": 0 },
+    { "book": "fairylight_friends", "type": "qa", "question": "Maybe they need a little (sun / seed).", "options": ["sun", "seed"], "answer": 0 },
+    { "book": "fairylight_friends", "type": "qa", "question": "I love their soft (petals / soil)!", "options": ["petals", "soil"], "answer": 0 },
+    { "book": "fairylight_friends", "type": "qa", "question": "Maybe they need a little (water / petal).", "options": ["water", "petal"], "answer": 0 },
+    { "book": "fairylight_friends", "type": "qa", "question": "Who saw a lightning bolt in the pool?", "options": ["Ruby", "Pip", "Iris", "Miss Goldwing"], "answer": 0 },
+    { "book": "fairylight_friends", "type": "qa", "question": "Who baked a beautiful cake?", "options": ["Pip", "Ruby", "Iris", "Miss Goldwing"], "answer": 0 },
+    { "book": "fairylight_friends", "type": "qa", "question": "Who loved growing things?", "options": ["Iris", "Pip", "Ruby", "Miss Goldwing"], "answer": 0 },
+    { "book": "fairylight_friends", "type": "qa", "question": "Who found a party?", "options": ["Miss Goldwing", "Pip", "Ruby", "Iris"], "answer": 0 },
+    { "book": "fairylight_friends", "type": "qa", "question": "These tickets are for rides, ____ and snacks.", "options": ["games", "short", "pocket", "gate"], "answer": 0 },
+    { "book": "fairylight_friends", "type": "qa", "question": "They won't let me on the ride. I am too ____.", "options": ["short", "games", "pocket", "map"], "answer": 0 },
+    { "book": "fairylight_friends", "type": "qa", "question": "Pip pulled a seed from his ____ and planted it.", "options": ["pocket", "gate", "map", "ticket"], "answer": 0 },
+    { "book": "fairylight_friends", "type": "qa", "question": "Miss Goldwing gave them ____ and a map.", "options": ["tickets", "short", "pocket", "gate"], "answer": 0 },
+    { "book": "fairylight_friends", "type": "qa", "question": "The friends flew through the Fairy Fest ____.", "options": ["gate", "pocket", "ticket", "game"], "answer": 0 },
+    { "book": "fairylight_friends", "type": "qa", "question": "What snack did Ruby find at Fairy Fest?", "options": ["Pixie Popcorn", "Fairy Floss", "Bubble Puffs", "Apple Pie"], "answer": 0 },
+
+    { "book": "hello_hedgehog", "type": "qa", "question": "It is not in my ____.", "options": ["closet", "bike", "freezer", "helmet"], "answer": 0 },
+    { "book": "hello_hedgehog", "type": "qa", "question": "I have a new ____.", "options": ["bike", "closet", "helmet", "bed"], "answer": 0 },
+    { "book": "hello_hedgehog", "type": "qa", "question": "It is not in the ____.", "options": ["freezer", "bike", "closet", "bed"], "answer": 0 },
+    { "book": "hello_hedgehog", "type": "qa", "question": "My ____ is lost.", "options": ["helmet", "bike", "bed", "freezer"], "answer": 0 },
+    { "book": "hello_hedgehog", "type": "qa", "question": "It is not under my ____.", "options": ["bed", "bike", "freezer", "closet"], "answer": 0 },
+    { "book": "hello_hedgehog", "type": "qa", "question": "Where did Hedgehog find his bike helmet?", "options": ["on the seat of my bike", "under my bed", "in my closet", "in the freezer"], "answer": 0 },
+    { "book": "hello_hedgehog", "type": "qa", "question": "The ride has made me ____.", "options": ["hungry", "tired", "full", "snack"], "answer": 0 },
+    { "book": "hello_hedgehog", "type": "qa", "question": "That was a big ____.", "options": ["snack", "hungry", "tired", "grapes"], "answer": 0 },
+    { "book": "hello_hedgehog", "type": "qa", "question": "Should I bring ____?", "options": ["yogurt", "full", "tired", "hungry"], "answer": 0 },
+    { "book": "hello_hedgehog", "type": "qa", "question": "I think I am too ____ for walking.", "options": ["full", "tired", "snack", "yogurt"], "answer": 0 },
+    { "book": "hello_hedgehog", "type": "qa", "question": "Who brought everything to share?", "options": ["Hedgehog", "Harry"], "answer": 0 },
+    { "book": "hello_hedgehog", "type": "qa", "question": "I need a way to keep ____.", "options": ["cool", "bored", "hot", "fan"], "answer": 1 },
+    { "book": "hello_hedgehog", "type": "qa", "question": "I will bring my (towel / ball / sandals).", "options": ["sandals", "towel", "fan"], "answer": 0 },
+    { "book": "hello_hedgehog", "type": "qa", "question": "Maybe the ____ will help.", "options": ["fan", "bored", "hot", "sandals"], "answer": 0 },
+    { "book": "hello_hedgehog", "type": "qa", "question": "What did Harry bring for swimming?", "options": ["sandals, towel, and goggles", "map, ball, and stone"], "answer": 0 },
+    { "book": "hello_hedgehog", "type": "qa", "question": "Hedgehog found a underwater ____.", "options": ["stone", "coin", "map", "ice cream"], "answer": 0 },
+    { "book": "hello_hedgehog", "type": "qa", "question": "Harry found a underwater ____.", "options": ["coin", "stone", "goggles", "towel"], "answer": 0 },
+    { "book": "hello_hedgehog", "type": "qa", "question": "Harry had a sleepover at Hedgehog's house.", "options": ["True (正確)", "False (錯誤)"], "answer": 0 },
+    { "book": "hello_hedgehog", "type": "qa", "question": "Harry cannot sleep without his teddy bear.", "options": ["True (正確)", "False (錯誤)"], "answer": 0 },
+    { "book": "hello_hedgehog", "type": "qa", "question": "Simon is Hedgehog's sleeping buddy.", "options": ["True (正確)", "False (錯誤)"], "answer": 1 },
+    { "book": "hello_hedgehog", "type": "qa", "question": "Hedgehog forgot to bring bug spray.", "options": ["True (正確)", "False (錯誤)"], "answer": 1 },
+    { "book": "hello_hedgehog", "type": "qa", "question": "Harry and Hedgehog played hide-and-seek outside.", "options": ["True (正確)", "False (錯誤)"], "answer": 1 },
+    { "book": "hello_hedgehog", "type": "qa", "question": "Harry hid in the sleeping bag.", "options": ["True (正確)", "False (錯誤)"], "answer": 0 },
+    { "book": "hello_hedgehog", "type": "qa", "question": "What is the name of Hedgehog's sleeping buddy?", "options": ["Larry", "Simon", "Harry", "Spot"], "answer": 0 },
+    { "book": "hello_hedgehog", "type": "qa", "question": "What is the name of Harry's sleeping buddy?", "options": ["Simon", "Larry", "Hedgehog", "Teddy"], "answer": 0 },
+
+    { "book": "princess_truly", "type": "qa", "question": "Who has rainbow power?", "options": ["Princess Truly", "Lizzie"], "answer": 0 },
+    { "book": "princess_truly", "type": "qa", "question": "Who planned a birthday party for kitty?", "options": ["Lizzie", "Princess Truly"], "answer": 0 },
+    { "book": "princess_truly", "type": "qa", "question": "Who is a SUPER pug?", "options": ["Noodles", "Waffles"], "answer": 0 },
+    { "book": "princess_truly", "type": "qa", "question": "What does the birthday cake look like?", "options": ["fish", "balloon", "sofa", "star"], "answer": 0 },
+    { "book": "princess_truly", "type": "qa", "question": "Who is very helpful?", "options": ["Noodles", "Waffles"], "answer": 0 },
+    { "book": "princess_truly", "type": "qa", "question": "How old is kitty Waffles?", "options": ["one", "two", "three", "four"], "answer": 0 },
+    { "book": "princess_truly", "type": "qa", "question": "Who jumps to see the cake?", "options": ["Waffles", "Noodles"], "answer": 0 },
+    { "book": "princess_truly", "type": "qa", "question": "Who fixed the broken fish cake?", "options": ["Princess Truly", "Lizzie"], "answer": 0 },
+    { "book": "princess_truly", "type": "qa", "question": "The (world / sky) is amazing.", "options": ["world", "sky"], "answer": 0 },
+    { "book": "princess_truly", "type": "qa", "question": "Come (friend / fly) along with me.", "options": ["fly", "friend"], "answer": 0 },
+    { "book": "princess_truly", "type": "qa", "question": "We will meet fun new (world / friends).", "options": ["friends", "world"], "answer": 0 },
+    { "book": "princess_truly", "type": "qa", "question": "The sky is the limit, with magic (fly / curly) hair.", "options": ["curly", "fly"], "answer": 0 },
+    { "book": "princess_truly", "type": "qa", "question": "We are (brave / curly) explorers.", "options": ["brave", "curly"], "answer": 0 },
+    { "book": "princess_truly", "type": "qa", "question": "We hop on a pink (boat / island) to find the perfect spot.", "options": ["boat", "island"], "answer": 0 },
+    { "book": "princess_truly", "type": "qa", "question": "The beach is too crowded. He does not like the (boat / sand).", "options": ["sand", "boat"], "answer": 0 },
+    { "book": "princess_truly", "type": "qa", "question": "He doesn't want to (swim / bug).", "options": ["swim", "bug"], "answer": 0 },
+    { "book": "princess_truly", "type": "qa", "question": "So we get on a (boat / jet) to go to the city.", "options": ["jet", "boat"], "answer": 0 },
+    { "book": "princess_truly", "type": "qa", "question": "The tiger looks scary. He sees a curly (bug / snake).", "options": ["snake", "bug"], "answer": 0 },
+    { "book": "princess_truly", "type": "qa", "question": "Princess Truly builds lots of new things with old things she has found.", "options": ["True (正確)", "False (錯誤)"], "answer": 0 },
+    { "book": "princess_truly", "type": "qa", "question": "The Brushy-Brush Machine makes our hands clean.", "options": ["True (正確)", "False (錯誤)"], "answer": 1 },
+    { "book": "princess_truly", "type": "qa", "question": "Princess Truly builds a super cool racer for Noodles.", "options": ["True (正確)", "False (錯誤)"], "answer": 1 },
+    { "book": "princess_truly", "type": "qa", "question": "Princess Truly adds a propeller to make Ty's bike fly.", "options": ["True (正確)", "False (錯誤)"], "answer": 0 },
+    { "book": "princess_truly", "type": "qa", "question": "Princess Truly and her brother give the pups a bath.", "options": ["True (正確)", "False (錯誤)"], "answer": 0 },
+    { "book": "princess_truly", "type": "qa", "question": "The Super Snack Machine makes nice snacks for the pets.", "options": ["True (正確)", "False (錯誤)"], "answer": 0 },
+    { "book": "princess_truly", "type": "qa", "question": "I find all my (tools / robots) and (top / build) things.", "options": ["tools, build", "robots, top"], "answer": 0 },
+    { "book": "princess_truly", "type": "qa", "question": "Princess Truly is afraid of ____.", "options": ["a bear cub", "lizards", "big bugs", "spiders"], "answer": 0 },
+    { "book": "princess_truly", "type": "qa", "question": "What is the shadow in the camping night?", "options": ["a big frog", "a bear", "a monster", "a tree"], "answer": 0 },
+    { "book": "princess_truly", "type": "qa", "question": "What's the name of Princess Truly's pet?", "options": ["Sir Noodles", "Waffles", "Lemon", "Harry"], "answer": 0 },
+    { "book": "princess_truly", "type": "qa", "question": "What's the name of Lizzie's pet?", "options": ["Waffles", "Sir Noodles", "Lemon", "Larry"], "answer": 0 },
+    { "book": "princess_truly", "type": "qa", "question": "What's the name of May's pet?", "options": ["Lemon", "Waffles", "Sir Noodles", "Simon"], "answer": 0 },
+    { "book": "princess_truly", "type": "qa", "question": "What's the name of their clubhouse?", "options": ["Rainbow Clubhouse", "Super Star Club", "Pet Friends Club"], "answer": 0 },
+    { "book": "princess_truly", "type": "qa", "question": "What does the welcome sign say?", "options": ["Everyone is Welcome", "Club Members Only", "No Pets Allowed"], "answer": 0 },
+
+    { "book": "unicorn_and_yeti", "type": "qa", "question": "Snow is (cold / hot) and (white / black).", "options": ["cold and white", "hot and black"], "answer": 0 },
+    { "book": "unicorn_and_yeti", "type": "qa", "question": "Who has a horn on its head?", "options": ["Unicorn", "Yeti"], "answer": 0 },
+    { "book": "unicorn_and_yeti", "type": "qa", "question": "Did you (throw / fight) that snowball at me?", "options": ["throw", "fight"], "answer": 0 },
+    { "book": "unicorn_and_yeti", "type": "qa", "question": "Friends should not (fight / throw).", "options": ["fight", "throw"], "answer": 0 },
+    { "book": "unicorn_and_yeti", "type": "qa", "question": "Building a fort is (hard / soft).", "options": ["hard", "soft"], "answer": 0 },
+    { "book": "unicorn_and_yeti", "type": "qa", "question": "Why is throwing snowballs not easy to Unicorn?", "options": ["because Unicorn has hooves, not hands", "because Unicorn doesn't like snow", "because of its horn"], "answer": 0 },
+    { "book": "unicorn_and_yeti", "type": "qa", "question": "What finally makes Yeti look super fancy?", "options": ["A super fancy hat", "Rainbow fur", "Flowery horns"], "answer": 0 },
+    { "book": "unicorn_and_yeti", "type": "qa", "question": "Yeti is good at kicking the ball.", "options": ["True (正確)", "False (錯誤)"], "answer": 0 },
+    { "book": "unicorn_and_yeti", "type": "qa", "question": "Unicorn is good at kicking the ball.", "options": ["True (正確)", "False (錯誤)"], "answer": 1 },
+    { "book": "unicorn_and_yeti", "type": "qa", "question": "Yeti is good at bouncing the ball on Unicorn's knee.", "options": ["True (正確)", "False (錯誤)"], "answer": 1 },
+    { "book": "unicorn_and_yeti", "type": "qa", "question": "Unicorn is good at bouncing the ball on the head.", "options": ["True (正確)", "False (錯誤)"], "answer": 1 },
+    { "book": "unicorn_and_yeti", "type": "qa", "question": "Yeti helps Unicorn get the ball off Unicorn's head.", "options": ["True (正確)", "False (錯誤)"], "answer": 0 },
+    { "book": "unicorn_and_yeti", "type": "qa", "question": "The ball becomes a ring because there's a hole in it.", "options": ["True (正確)", "False (錯誤)"], "answer": 0 },
+    { "book": "unicorn_and_yeti", "type": "qa", "question": "Yeti and Unicorn played ring toss again and again.", "options": ["True (正確)", "False (錯誤)"], "answer": 0 },
+    { "book": "unicorn_and_yeti", "type": "qa", "question": "Unicorn is good at tossing the ring, and Yeti is good at catching it.", "options": ["True (正確)", "False (錯誤)"], "answer": 1 },
+    { "book": "unicorn_and_yeti", "type": "qa", "question": "Running will be fun. Let's ____ to that tree.", "options": ["run", "rock", "team", "fast"], "answer": 0 },
+    { "book": "unicorn_and_yeti", "type": "qa", "question": "The race was just for ____.", "options": ["fun", "fast", "rock", "team"], "answer": 0 },
+    { "book": "unicorn_and_yeti", "type": "qa", "question": "We will be a racing ____.", "options": ["team", "fun", "rock", "fast"], "answer": 0 },
+    { "book": "unicorn_and_yeti", "type": "qa", "question": "Where do Unicorn and Yeti put the sparkly rock?", "options": ["On top of the cloud", "In the river", "Under the tree"], "answer": 0 },
+    { "book": "unicorn_and_yeti", "type": "qa", "question": "What is the first step to learn ice skating?", "options": ["Stand all the way up", "Slide one foot", "Slide the other foot"], "answer": 0 },
+    { "book": "unicorn_and_yeti", "type": "qa", "question": "Yeti and Unicorn walked up and down a hill.", "options": ["True (正確)", "False (錯誤)"], "answer": 0 },
+    { "book": "unicorn_and_yeti", "type": "qa", "question": "Unicorn feels happy in the forest in the beginning.", "options": ["True (正確)", "False (錯誤)"], "answer": 1 },
+    { "book": "unicorn_and_yeti", "type": "qa", "question": "The green tree needles look pretty to Yeti.", "options": ["True (正確)", "False (錯誤)"], "answer": 0 },
+    { "book": "unicorn_and_yeti", "type": "qa", "question": "The snow looks blah to Unicorn.", "options": ["True (正確)", "False (錯誤)"], "answer": 0 },
+    { "book": "unicorn_and_yeti", "type": "qa", "question": "Why did Unicorn finally see the forest was amazing?", "options": ["Because the sun comes out", "Because of hot cocoa", "Because of a magic wand"], "answer": 0 },
+    { "book": "unicorn_and_yeti", "type": "qa", "question": "What is the last thing Yeti knitted for Unicorn to keep warm?", "options": ["A blanket", "A scarf", "A pair of mittens", "A sweater"], "answer": 0 }
+  ],
+
+  "matching": [
+    {
+      "book": "best_buddies", "type": "matching", "prompt": "Best Buddies：單字與圖片意義配對 (一)",
+      "pairs": [
+        { "left": "sit", "right": "坐下 (狗坐著)" },
+        { "left": "wall", "right": "磚牆" },
+        { "left": "bark", "right": "狗吠叫" }
+      ]
+    },
+    {
+      "book": "best_buddies", "type": "matching", "prompt": "Best Buddies：單字與圖片意義配對 (二)",
+      "pairs": [
+        { "left": "run", "right": "奔跑 (小男孩)" },
+        { "left": "spell", "right": "施法 (小巫師)" },
+        { "left": "new", "right": "全新 (新書包)" }
+      ]
+    },
+    {
+      "book": "best_buddies", "type": "matching", "prompt": "Best Buddies：箱子方位與動詞配對",
+      "pairs": [
+        { "left": "in", "right": "在...裡面" },
+        { "left": "out of", "right": "離開/跳出箱子" },
+        { "left": "on", "right": "在...上面" }
+      ]
+    },
+    {
+      "book": "best_buddies", "type": "matching", "prompt": "Best Buddies：雨天情境單字配對",
+      "pairs": [
+        { "left": "wet", "right": "濕透淋雨" },
+        { "left": "splash", "right": "水花四濺" },
+        { "left": "lick", "right": "狗舔臉頰" }
+      ]
+    },
+    {
+      "book": "best_buddies", "type": "matching", "prompt": "Best Buddies：動作與物品配對",
+      "pairs": [
+        { "left": "grab", "right": "抓取漢堡" },
+        { "left": "climb", "right": "攀爬攀岩" },
+        { "left": "loud", "right": "大聲喧鬧" }
+      ]
+    },
+    {
+      "book": "best_buddies", "type": "matching", "prompt": "Best Buddies：拯救小鴨物品配對",
+      "pairs": [
+        { "left": "duck", "right": "黃色玩具鴨" },
+        { "left": "save", "right": "牽手拯救" },
+        { "left": "mess", "right": "雜亂衣櫥" }
+      ]
+    },
+
+    {
+      "book": "bumble_and_bee", "type": "matching", "prompt": "Bumble and Bee：中英文配對 (一)",
+      "pairs": [
+        { "left": "paint", "right": "畫畫" },
+        { "left": "jump", "right": "跳躍" },
+        { "left": "wish", "right": "許願" }
+      ]
+    },
+    {
+      "book": "bumble_and_bee", "type": "matching", "prompt": "Bumble and Bee：中英文配對 (二)",
+      "pairs": [
+        { "left": "pumpkin", "right": "南瓜" },
+        { "left": "list", "right": "清單" },
+        { "left": "bake", "right": "烘烤" }
+      ]
+    },
+    {
+      "book": "bumble_and_bee", "type": "matching", "prompt": "Bumble and Bee：廚房單字中英配對",
+      "pairs": [
+        { "left": "forget", "right": "忘記" },
+        { "left": "butter", "right": "奶油" },
+        { "left": "pie", "right": "派" }
+      ]
+    },
+    {
+      "book": "bumble_and_bee", "type": "matching", "prompt": "Bumble and Bee：冬日單字中英配對",
+      "pairs": [
+        { "left": "winter", "right": "冬天" },
+        { "left": "friend", "right": "朋友" },
+        { "left": "room", "right": "房間" }
+      ]
+    },
+    {
+      "book": "bumble_and_bee", "type": "matching", "prompt": "Bumble and Bee：尋寶海盜單字配對",
+      "pairs": [
+        { "left": "pirate", "right": "海盜" },
+        { "left": "key", "right": "鑰匙" },
+        { "left": "map", "right": "地圖" }
+      ]
+    },
+    {
+      "book": "bumble_and_bee", "type": "matching", "prompt": "Bumble and Bee：捉迷藏單字中英配對",
+      "pairs": [
+        { "left": "hide", "right": "躲藏" },
+        { "left": "find", "right": "尋找" },
+        { "left": "sleep", "right": "睡覺" }
+      ]
+    },
+    {
+      "book": "bumble_and_bee", "type": "matching", "prompt": "Bumble and Bee：照相與日常單字配對",
+      "pairs": [
+        { "left": "picture", "right": "圖片" },
+        { "left": "smile", "right": "微笑" },
+        { "left": "count", "right": "數數" }
+      ]
+    },
+    {
+      "book": "bumble_and_bee", "type": "matching", "prompt": "Bumble and Bee：跳搖擺舞方向與概念配對",
+      "pairs": [
+        { "left": "dance", "right": "舞蹈" },
+        { "left": "right", "right": "右邊" },
+        { "left": "left", "right": "左邊" }
+      ]
+    },
+
+    {
+      "book": "fairylight_friends", "type": "matching", "prompt": "Fairylight Friends：故事主角與魔法配對",
+      "pairs": [
+        { "left": "Ruby", "right": "閃電魔法 (Lightning bolt)" },
+        { "left": "Iris", "right": "花朵魔法 (Flower)" },
+        { "left": "Pip", "right": "彩虹魔法 (Rainbow)" }
+      ]
+    },
+    {
+      "book": "fairylight_friends", "type": "matching", "prompt": "Fairylight Friends：烘焙器具與食材配對",
+      "pairs": [
+        { "left": "oven", "right": "烤箱" },
+        { "left": "flour", "right": "麵粉" },
+        { "left": "batter", "right": "麵糊" }
+      ]
+    },
+    {
+      "book": "fairylight_friends", "type": "matching", "prompt": "Fairylight Friends：植物生長要素配對",
+      "pairs": [
+        { "left": "seed", "right": "種子" },
+        { "left": "soil", "right": "土壤" },
+        { "left": "petal", "right": "花瓣" }
+      ]
+    },
+    {
+      "book": "fairylight_friends", "type": "matching", "prompt": "Fairylight Friends：角色與派對事蹟配對",
+      "pairs": [
+        { "left": "Pip", "right": "烤了漂亮的蛋糕" },
+        { "left": "Iris", "right": "熱愛種植生長植物" },
+        { "left": "Miss Goldwing", "right": "驚喜派對的主角" }
+      ]
+    },
+    {
+      "book": "fairylight_friends", "type": "matching", "prompt": "Fairylight Friends：感官與景物中英配對",
+      "pairs": [
+        { "left": "field trip", "right": "校外教學" },
+        { "left": "path", "right": "小徑" },
+        { "left": "full moon", "right": "滿月" }
+      ]
+    },
+    {
+      "book": "fairylight_friends", "type": "matching", "prompt": "Fairylight Friends：慶典園遊會單字配對",
+      "pairs": [
+        { "left": "bowling", "right": "保齡球" },
+        { "left": "pin", "right": "保齡球瓶" },
+        { "left": "prize", "right": "獎品玩偶" }
+      ]
+    },
+    {
+      "book": "fairylight_friends", "type": "matching", "prompt": "Fairylight Friends：冬日雪景單字配對",
+      "pairs": [
+        { "left": "snowflake", "right": "雪花" },
+        { "left": "melt", "right": "融化成水" },
+        { "left": "teapot", "right": "茶壺" }
+      ]
+    },
+    {
+      "book": "fairylight_friends", "type": "matching", "prompt": "Fairylight Friends：編織保暖衣物配對",
+      "pairs": [
+        { "left": "mittens", "right": "連指手套" },
+        { "left": "blanket", "right": "毛毯" },
+        { "left": "scarf", "right": "圍巾" }
+      ]
+    },
+
+    {
+      "book": "hello_hedgehog", "type": "matching", "prompt": "Hello Hedgehog：尋找單車裝備與家具配對",
+      "pairs": [
+        { "left": "closet", "right": "衣櫥" },
+        { "left": "freezer", "right": "冷凍庫" },
+        { "left": "flower pot", "right": "花盆" }
+      ]
+    },
+    {
+      "book": "hello_hedgehog", "type": "matching", "prompt": "Hello Hedgehog：單車零件中英配對 (一)",
+      "pairs": [
+        { "left": "wheel", "right": "輪子" },
+        { "left": "handlebar", "right": "單車把手" },
+        { "left": "bell", "right": "鈴鐺" }
+      ]
+    },
+    {
+      "book": "hello_hedgehog", "type": "matching", "prompt": "Hello Hedgehog：單車零件中英配對 (二)",
+      "pairs": [
+        { "left": "seat", "right": "坐墊/座位" },
+        { "left": "basket", "right": "車籃" },
+        { "left": "helmet", "right": "安全帽" }
+      ]
+    },
+    {
+      "book": "hello_hedgehog", "type": "matching", "prompt": "Hello Hedgehog：出遊野餐點心中英配對",
+      "pairs": [
+        { "left": "grapes", "right": "葡萄" },
+        { "left": "yogurt", "right": "優格" },
+        { "left": "nuts", "right": "堅果" }
+      ]
+    },
+    {
+      "book": "hello_hedgehog", "type": "matching", "prompt": "Hello Hedgehog：夏日戲水單字配對",
+      "pairs": [
+        { "left": "sandals", "right": "涼鞋" },
+        { "left": "goggles", "right": "泳鏡" },
+        { "left": "towel", "right": "毛巾" }
+      ]
+    },
+    {
+      "book": "hello_hedgehog", "type": "matching", "prompt": "Hello Hedgehog：水中尋寶中英配對",
+      "pairs": [
+        { "left": "treasure", "right": "寶藏" },
+        { "left": "stone", "right": "石頭" },
+        { "left": "coin", "right": "硬幣" }
+      ]
+    },
+    {
+      "book": "hello_hedgehog", "type": "matching", "prompt": "Hello Hedgehog：睡衣派對隨身物品配對",
+      "pairs": [
+        { "left": "toothbrush", "right": "牙刷" },
+        { "left": "sleeping bag", "right": "睡袋" },
+        { "left": "teddy bear", "right": "泰迪熊玩偶" }
+      ]
+    },
+    {
+      "book": "hello_hedgehog", "type": "matching", "prompt": "Hello Hedgehog：診所檢查設備與情境配對",
+      "pairs": [
+        { "left": "doctor", "right": "醫生" },
+        { "left": "shot", "right": "打針" },
+        { "left": "checkup", "right": "健康檢查" }
+      ]
+    },
+    {
+      "book": "hello_hedgehog", "type": "matching", "prompt": "Hello Hedgehog：看診心情與身體單字配對",
+      "pairs": [
+        { "left": "worried", "right": "擔心的" },
+        { "left": "tongue", "right": "伸出舌頭" },
+        { "left": "sticker", "right": "勇敢貼紙獎勵" }
+      ]
+    },
+
+    {
+      "book": "princess_truly", "type": "matching", "prompt": "Princess Truly：超級英雄裝備中英配對 (一)",
+      "pairs": [
+        { "left": "princess", "right": "公主" },
+        { "left": "rainbow", "right": "彩虹" },
+        { "left": "sidekick", "right": "得力助手/跟班" }
+      ]
+    },
+    {
+      "book": "princess_truly", "type": "matching", "prompt": "Princess Truly：超級英雄裝備中英配對 (二)",
+      "pairs": [
+        { "left": "cape", "right": "披風" },
+        { "left": "hero", "right": "英雄" },
+        { "left": "boots", "right": "靴子" }
+      ]
+    },
+    {
+      "book": "princess_truly", "type": "matching", "prompt": "Princess Truly：貓咪生日派對單字配對",
+      "pairs": [
+        { "left": "candle", "right": "生日蠟燭" },
+        { "left": "fish", "right": "魚造型蛋糕" },
+        { "left": "sofa", "right": "沙發" }
+      ]
+    },
+    {
+      "book": "princess_truly", "type": "matching", "prompt": "Princess Truly：交通工具與場景配對",
+      "pairs": [
+        { "left": "island", "right": "海島" },
+        { "left": "jet", "right": "噴射飛機" },
+        { "left": "boat", "right": "小船" }
+      ]
+    },
+    {
+      "book": "princess_truly", "type": "matching", "prompt": "Princess Truly：大自然動物線索配對",
+      "pairs": [
+        { "left": "whale", "right": "用尾巴揮手打招呼" },
+        { "left": "penguin", "right": "在冰上搖搖擺擺走路" },
+        { "left": "pug", "right": "討厭沙子且怕喇叭聲" }
+      ]
+    },
+    {
+      "book": "princess_truly", "type": "matching", "prompt": "Princess Truly：發明與組裝單字配對",
+      "pairs": [
+        { "left": "robot", "right": "機器人" },
+        { "left": "race car", "right": "特製賽車" },
+        { "left": "propeller", "right": "讓腳踏車起飛的螺旋槳" }
+      ]
+    },
+    {
+      "book": "princess_truly", "type": "matching", "prompt": "Princess Truly：露營野外活動單字配對",
+      "pairs": [
+        { "left": "tent", "right": "帳篷" },
+        { "left": "woods", "right": "樹林" },
+        { "left": "waterfall", "right": "瀑布" }
+      ]
+    },
+    {
+      "book": "princess_truly", "type": "matching", "prompt": "Princess Truly：克服打嗝恐懼單字配對",
+      "pairs": [
+        { "left": "lizard", "right": "蜥蜴 (完全不怕)" },
+        { "left": "spider", "right": "蜘蛛 (覺得很可愛)" },
+        { "left": "bear cub", "right": "小熊 (嚇到跳起來治好打嗝)" }
+      ]
+    },
+    {
+      "book": "princess_truly", "type": "matching", "prompt": "Princess Truly：遊樂場設施中英配對",
+      "pairs": [
+        { "left": "ladder", "right": "梯子" },
+        { "left": "mop", "right": "拖把/拖地" },
+        { "left": "sign", "right": "告示看板" }
+      ]
+    },
+    {
+      "book": "princess_truly", "type": "matching", "prompt": "Princess Truly：睡前溫馨單字配對",
+      "pairs": [
+        { "left": "lullaby", "right": "搖籃曲" },
+        { "left": "snuggle", "right": "依偎抱抱" },
+        { "left": "cupcake", "right": "杯子蛋糕" }
+      ]
+    },
+
+    {
+      "book": "unicorn_and_yeti", "type": "matching", "prompt": "Unicorn and Yeti：雪地特質配對",
+      "pairs": [
+        { "left": "sparkly", "right": "獨角獸的角 (閃閃發光)" },
+        { "left": "white", "right": "白雪 (覆蓋山坡)" },
+        { "left": "bright", "right": "太陽 (溫暖明亮)" }
+      ]
+    },
+    {
+      "book": "unicorn_and_yeti", "type": "matching", "prompt": "Unicorn and Yeti：個性與狀態中英配對",
+      "pairs": [
+        { "left": "fancy", "right": "精緻華麗的" },
+        { "left": "amazing", "right": "令人驚奇的" },
+        { "left": "magic", "right": "不可思議的魔法" }
+      ]
+    },
+    {
+      "book": "unicorn_and_yeti", "type": "matching", "prompt": "Unicorn and Yeti：雪球大戰單字中英配對",
+      "pairs": [
+        { "left": "snowball", "right": "雪球" },
+        { "left": "throw", "right": "丟擲" },
+        { "left": "soup", "right": "暖身熱湯" }
+      ]
+    },
+    {
+      "book": "unicorn_and_yeti", "type": "matching", "prompt": "Unicorn and Yeti：毛髮造型配對",
+      "pairs": [
+        { "left": "smooth", "right": "太滑順 (Too sleek)" },
+        { "left": "curly", "right": "太捲太癢 (Too itchy)" },
+        { "left": "rainbow", "right": "太色彩繽紛 (Too colorful)" }
+      ]
+    },
+    {
+      "book": "unicorn_and_yeti", "type": "matching", "prompt": "Unicorn and Yeti：跑步競賽中英配對",
+      "pairs": [
+        { "left": "rock", "right": "路上的石頭" },
+        { "left": "fast", "right": "速度飛快的" },
+        { "left": "team", "right": "攜手合作的團隊" }
+      ]
+    },
+    {
+      "book": "unicorn_and_yeti", "type": "matching", "prompt": "Unicorn and Yeti：滑冰動作與感受配對",
+      "pairs": [
+        { "left": "slippery", "right": "濕滑的冰面" },
+        { "left": "ice skates", "right": "溜冰鞋" },
+        { "left": "hot cocoa", "right": "溜冰後的熱可可" }
+      ]
+    },
+    {
+      "book": "unicorn_and_yeti", "type": "matching", "prompt": "Unicorn and Yeti：食物描述中英配對",
+      "pairs": [
+        { "left": "peaches", "right": "香甜的水蜜桃" },
+        { "left": "ice cream", "right": "清涼冰淇淋" },
+        { "left": "weird", "right": "奇特怪異的口味" }
+      ]
+    },
+    {
+      "book": "unicorn_and_yeti", "type": "matching", "prompt": "Unicorn and Yeti：保暖織物配對",
+      "pairs": [
+        { "left": "leg warmers", "right": "保暖腿套" },
+        { "left": "icicles", "right": "屋簷的冰柱" },
+        { "left": "knit", "right": "用心編織毛衣" }
+      ]
+    }
+  ],
+
+  "memory": [
+    { "book": "best_buddies", "type": "memory", "prompt": "找出 Best Buddies 派對點心單字配對", "cards": ["yummy", "pie", "eat"] },
+    { "book": "best_buddies", "type": "memory", "prompt": "找出 Best Buddies 彈跳與身型單字配對", "cards": ["jump", "high", "short"] },
+    { "book": "best_buddies", "type": "memory", "prompt": "找出 Best Buddies 逗趣動作單字配對", "cards": ["bite", "pull", "box"] },
+    { "book": "best_buddies", "type": "memory", "prompt": "找出 Best Buddies 雨天情境單字配對", "cards": ["rain", "sad", "muddy"] },
+    { "book": "best_buddies", "type": "memory", "prompt": "找出 Best Buddies 氣球派對單字配對", "cards": ["balloon", "peek", "string"] },
+    { "book": "best_buddies", "type": "memory", "prompt": "找出 Best Buddies 拯救小鴨單字配對", "cards": ["duck", "toy", "help"] },
+
+    { "book": "bumble_and_bee", "type": "memory", "prompt": "找出 Bumble and Bee 萬聖南瓜單字配對", "cards": ["pumpkin", "wish", "paint"] },
+    { "book": "bumble_and_bee", "type": "memory", "prompt": "找出 Bumble and Bee 烘焙廚房單字配對", "cards": ["bake", "butter", "pie"] },
+    { "book": "bumble_and_bee", "type": "memory", "prompt": "找出 Bumble and Bee 冬天好夥伴單字配對", "cards": ["winter", "friends", "practice"] },
+    { "book": "bumble_and_bee", "type": "memory", "prompt": "找出 Bumble and Bee 趣味扮演單字配對", "cards": ["animal", "cow", "game"] },
+    { "book": "bumble_and_bee", "type": "memory", "prompt": "找出 Bumble and Bee 海盜尋寶單字配對", "cards": ["pirate", "treasure", "key"] },
+    { "book": "bumble_and_bee", "type": "memory", "prompt": "找出 Bumble and Bee 捉迷藏好友單字配對", "cards": ["hide", "read", "sleep"] },
+    { "book": "bumble_and_bee", "type": "memory", "prompt": "找出 Bumble and Bee 微笑合照單字配對", "cards": ["smile", "picture", "count"] },
+    { "book": "bumble_and_bee", "type": "memory", "prompt": "找出 Bumble and Bee 驚喜派對單字配對", "cards": ["surprise", "bear", "scare"] },
+
+    { "book": "fairylight_friends", "type": "memory", "prompt": "找出 Fairylight Friends 魔法單字配對", "cards": ["fairy", "wand", "rainbow"] },
+    { "book": "fairylight_friends", "type": "memory", "prompt": "找出 Fairylight Friends 烘焙材料單字配對", "cards": ["cake", "oven", "flour"] },
+    { "book": "fairylight_friends", "type": "memory", "prompt": "找出 Fairylight Friends 花園植物單字配對", "cards": ["seed", "soil", "petal"] },
+    { "book": "fairylight_friends", "type": "memory", "prompt": "找出 Fairylight Friends 滿月仙子單字配對", "cards": ["moon", "star", "space"] },
+    { "book": "fairylight_friends", "type": "memory", "prompt": "找出 Fairylight Friends 園遊會門票單字配對", "cards": ["ticket", "gate", "pocket"] },
+    { "book": "fairylight_friends", "type": "memory", "prompt": "找出 Fairylight Friends 仙子跳舞單字配對", "cards": ["dance", "spin", "bloom"] },
+    { "book": "fairylight_friends", "type": "memory", "prompt": "找出 Fairylight Friends 冬日雪景單字配對", "cards": ["snow", "water", "melt"] },
+    { "book": "fairylight_friends", "type": "memory", "prompt": "找出 Fairylight Friends 璀璨光芒單字配對", "cards": ["shine", "firework", "lighthouse"] },
+
+    { "book": "hello_hedgehog", "type": "memory", "prompt": "找出 Hello Hedgehog 單車裝備單字配對", "cards": ["bike", "helmet", "closet"] },
+    { "book": "hello_hedgehog", "type": "memory", "prompt": "找出 Hello Hedgehog 腳踏車配件單字配對", "cards": ["wheel", "bell", "basket"] },
+    { "book": "hello_hedgehog", "type": "memory", "prompt": "找出 Hello Hedgehog 美味點心單字配對", "cards": ["grapes", "yogurt", "snack"] },
+    { "book": "hello_hedgehog", "type": "memory", "prompt": "找出 Hello Hedgehog 炎炎夏日單字配對", "cards": ["fan", "cool", "sandals"] },
+    { "book": "hello_hedgehog", "type": "memory", "prompt": "找出 Hello Hedgehog 湖畔尋寶單字配對", "cards": ["pond", "map", "crayon"] },
+    { "book": "hello_hedgehog", "type": "memory", "prompt": "找出 Hello Hedgehog 睡衣露營單字配對", "cards": ["pillow", "blanket", "backpack"] },
+    { "book": "hello_hedgehog", "type": "memory", "prompt": "找出 Hello Hedgehog 勇敢看診單字配對", "cards": ["doctor", "checkup", "blocks"] },
+    { "book": "hello_hedgehog", "type": "memory", "prompt": "找出 Hello Hedgehog 診所獎勵單字配對", "cards": ["heart", "sticker", "lollipop"] },
+
+    { "book": "princess_truly", "type": "memory", "prompt": "找出 Princess Truly 超級公主單字配對", "cards": ["princess", "hero", "cape"] },
+    { "book": "princess_truly", "type": "memory", "prompt": "找出 Princess Truly 寵物生日派對單字配對", "cards": ["cake", "candle", "balloon"] },
+    { "book": "princess_truly", "type": "memory", "prompt": "找出 Princess Truly 冒險探險家單字配對", "cards": ["fly", "world", "brave"] },
+    { "book": "princess_truly", "type": "memory", "prompt": "找出 Princess Truly 南極海洋生物單字配對", "cards": ["whale", "penguin", "ocean"] },
+    { "book": "princess_truly", "type": "memory", "prompt": "找出 Princess Truly 熱帶雨林動物單字配對", "cards": ["tiger", "snake", "island"] },
+    { "book": "princess_truly", "type": "memory", "prompt": "找出 Princess Truly 動手發明家單字配對", "cards": ["robot", "tool", "build"] },
+    { "book": "princess_truly", "type": "memory", "prompt": "找出 Princess Truly 露營裝備單字配對", "cards": ["tent", "woods", "waterfall"] },
+    { "book": "princess_truly", "type": "memory", "prompt": "找出 Princess Truly 營火夜遊單字配對", "cards": ["star", "flashlight", "monster"] },
+    { "book": "princess_truly", "type": "memory", "prompt": "找出 Princess Truly 公園玩耍單字配對", "cards": ["pup", "scooter", "soccer"] },
+    { "book": "princess_truly", "type": "memory", "prompt": "找出 Princess Truly 樹屋俱樂部單字配對", "cards": ["sign", "ladder", "cupcake"] },
+
+    { "book": "unicorn_and_yeti", "type": "memory", "prompt": "找出 Unicorn and Yeti 雪景奇觀單字配對", "cards": ["sparkles", "cold", "white"] },
+    { "book": "unicorn_and_yeti", "type": "memory", "prompt": "找出 Unicorn and Yeti 魔法好友單字配對", "cards": ["fancy", "magic", "amazing"] },
+    { "book": "unicorn_and_yeti", "type": "memory", "prompt": "找出 Unicorn and Yeti 雪球戰術單字配對", "cards": ["snowball", "throw", "soup"] },
+    { "book": "unicorn_and_yeti", "type": "memory", "prompt": "找出 Unicorn and Yeti 球類運動單字配對", "cards": ["kick", "bounce", "ring"] },
+    { "book": "unicorn_and_yeti", "type": "memory", "prompt": "找出 Unicorn and Yeti 賽跑比賽單字配對", "cards": ["race", "team", "fast"] },
+    { "book": "unicorn_and_yeti", "type": "memory", "prompt": "找出 Unicorn and Yeti 翹翹板玩耍單字配對", "cards": ["seesaw", "push", "swing"] },
+    { "book": "unicorn_and_yeti", "type": "memory", "prompt": "找出 Unicorn and Yeti 甜品滋味單字配對", "cards": ["peaches", "ice cream", "sweet"] },
+    { "book": "unicorn_and_yeti", "type": "memory", "prompt": "找出 Unicorn and Yeti 冬天編織禮物單字配對", "cards": ["mittens", "scarf", "knit"] }
+  ]
+}

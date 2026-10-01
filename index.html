@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>讀本閱讀挑戰小遊戲</title>
+  <style>
+    * { box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+    body { background: #eef2f6; margin: 0; padding: 20px; display: flex; justify-content: center; }
+    .card { background: white; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.08); width: 100%; max-width: 620px; padding: 24px; }
+    .header-bar { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #f0f3f6; padding-bottom: 12px; margin-bottom: 20px; font-weight: 600; color: #4a5568; }
+    .tag { font-size: 13px; padding: 4px 10px; border-radius: 20px; background: #e2e8f0; color: #2d3748; }
+    .prompt { font-size: 18px; font-weight: bold; margin-bottom: 20px; color: #1a202c; line-height: 1.5; }
+    
+    /* QA 題型按鈕 */
+    .qa-btn { display: block; width: 100%; text-align: left; padding: 14px 18px; margin-bottom: 12px; border: 1.5px solid #e2e8f0; border-radius: 10px; background: #fff; font-size: 15px; cursor: pointer; transition: all 0.2s; color: #2d3748; }
+    .qa-btn:hover { background: #f7fafc; border-color: #cbd5e0; }
+
+    /* 連連看樣式 */
+    .matching-box { display: flex; gap: 16px; margin-top: 10px; }
+    .col { flex: 1; display: flex; flex-direction: column; gap: 10px; }
+    .item-btn { padding: 14px 12px; border: 1.5px solid #cbd5e0; border-radius: 8px; background: #fff; cursor: pointer; font-size: 14px; text-align: center; color: #2d3748; transition: all 0.2s; }
+    .item-btn.selected { border-color: #3182ce; background: #ebf8ff; font-weight: bold; color: #2b6cb0; }
+    .item-btn.paired { border-color: #48bb78; background: #f0fff4; color: #22543d; cursor: default; }
+
+    /* 對對碰翻牌樣式 */
+    .grid-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 10px; }
+    .flip-card { height: 80px; background: #3182ce; color: transparent; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 14px; cursor: pointer; user-select: none; transition: transform 0.2s; text-align: center; padding: 8px; }
+    .flip-card.open { background: #edf2f7; color: #2d3748; border: 2px solid #cbd5e0; }
+    .flip-card.paired { background: #c6f6d5; color: #22543d; border: 2px solid #68d391; cursor: default; }
+
+    /* 書籍篩選器選單 */
+    .filter-group { display: flex; flex-direction: column; gap: 10px; margin: 20px 0; }
+    .book-item { display: flex; align-items: center; padding: 14px; border: 1.5px solid #e2e8f0; border-radius: 10px; cursor: pointer; background: #fff; transition: background 0.2s; }
+    .book-item:hover { background: #f7fafc; }
+    .book-item input { margin-right: 14px; transform: scale(1.3); }
+    .btn-primary { width: 100%; padding: 14px; background: #3182ce; color: white; border: none; border-radius: 10px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background 0.2s; }
+    .btn-primary:hover { background: #2b6cb0; }
+    .status-msg { text-align: center; padding: 40px 20px; color: #718096; }
+  </style>
+</head>
+<body>
+
+<div class="card" id="game-app">
+  <div class="status-msg">正在載入讀本題庫中，請稍候...</div>
+</div>
+
+<script>
+  // 6 本讀本清單定義
+  const BOOKS_META = [
+    { id: "best_buddies", title: "Best Buddies 系列 (A Pie for Us / Rain Is Wet / Save the Duck)" },
+    { id: "bumble_and_bee", title: "Bumble and Bee" },
+    { id: "fairylight_friends", title: "Fairylight Friends" },
+    { id: "hello_hedgehog", title: "Hello, Hedgehog!" },
+    { id: "princess_truly", title: "Princess Truly" },
+    { id: "unicorn_and_yeti", title: "Unicorn and Yeti" }
+  ];
+
+  let fullQuestionBank = null;
+  let quizQuestions = [];
+  let currentIndex = 0;
+  let totalScore = 0;
+
+  function shuffle(array) {
+    const arr = [...array];
+    for (let i = arr.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [arr[i], arr[j]] = [arr[j], arr[i]];
+    }
+    return arr;
+  }
+
+  // 1. 讀取 questions.json
+  async function loadQuizData() {
+    try {
+      const res = await fetch('./questions.json');
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      fullQuestionBank = await res.json();
+      renderBookSelector();
+    } catch (e) {
+      document.getElementById("game-app").innerHTML = `
+        <div class="status-msg" style="color: #e53e3e;">
+          <p><strong>題庫讀取失敗：${e.message}</strong></p>
+          <p style="font-size: 13px; color: #a0aec0;">若在本地端瀏覽，請使用 VS Code Live Server 開啟；或將檔案推送到 GitHub Pages 測試。</p>
+        </div>
+      `;
+    }
+  }
+
+  // 2. 顯示讀本勾選介面
+  function renderBookSelector() {
+    const app = document.getElementById("game-app");
+    const bookOptionsHtml = BOOKS_META.map(b => `
+      <label class="book-item">
+        <input type="checkbox" name="selected_books" value="${b.id}" checked>
+        <span><strong>${b.title}</strong></span>
+      </label>
+    `).join("");
+
+    app.innerHTML = `
+      <h2 style="margin-top:0; color:#2d3748;">📚 選擇你想挑戰的讀本</h2>
+      <p style="color:#718096; font-size:14px;">勾選你看過的書籍，系統將從中隨機抽出 15 題（對答、連連看、對對碰各 5 題）：</p>
+      <div class="filter-group">
+        ${bookOptionsHtml}
+      </div>
+      <button class="btn-primary" onclick="startFilteredQuiz()">開始挑戰 15 題</button>
+    `;
+  }
+
+  // 3. 篩選與隨機抽題（各抽 5 題）
+  function startFilteredQuiz() {
+    const checkboxes = document.querySelectorAll('input[name="selected_books"]:checked');
+    const selectedBookIds = Array.from(checkboxes).map(cb => cb.value);
+
+    if (selectedBookIds.length === 0) {
+      alert("請至少選擇一本讀本！");
+      return;
+    }
+
+    const filteredQA = fullQuestionBank.qa.filter(q => selectedBookIds.includes(q.book));
+    const filteredMatching = fullQuestionBank.matching.filter(q => selectedBookIds.includes(q.book));
+    const filteredMemory = fullQuestionBank.memory.filter(q => selectedBookIds.includes(q.book));
+
+    // 各類別洗牌後抽取 5 題（不足 5 題則全取）
+    const sampledQA = shuffle(filteredQA).slice(0, 5);
+    const sampledMatching = shuffle(filteredMatching).slice(0, 5);
+    const sampledMemory = shuffle(filteredMemory).slice(0, 5);
+
+    quizQuestions = [...sampledQA, ...sampledMatching, ...sampledMemory];
+
+    if (quizQuestions.length === 0) {
+      alert("所選書籍目前無可用題目，請重新勾選！");
+      return;
+    }
+
+    currentIndex = 0;
+    totalScore = 0;
+    renderCurrentQuestion();
+  }
+
+  // 4. 題目路由分流
+  function renderCurrentQuestion() {
+    if (currentIndex >= quizQuestions.length) {
+      renderGameResult();
+      return;
+    }
+    const q = quizQuestions[currentIndex];
+    if (q.type === 'qa') renderQA(q);
+    else if (q.type === 'matching') renderMatching(q);
+    else if (q.type === 'memory') renderMemory(q);
+  }
+
+  // 5. 單選對答介面
+  function renderQA(data) {
+    const app = document.getElementById("game-app");
+    app.innerHTML = `
+      <div class="header-bar">
+        <span>第 ${currentIndex + 1} / ${quizQuestions.length} 題</span>
+        <span class="tag">單選對答</span>
+      </div>
+      <div class="prompt">${data.question}</div>
+      <div id="qa-options"></div>
+    `;
+    const container = document.getElementById("qa-options");
+    data.options.forEach((opt, idx) => {
+      const btn = document.createElement("button");
+      btn.className = "qa-btn";
+      btn.textContent = opt;
+      btn.onclick = () => {
+        if (idx === data.answer) totalScore++;
+        currentIndex++;
+        renderCurrentQuestion();
+      };
+      container.appendChild(btn);
+    });
+  }
+
+  // 6. 連連看配對介面
+  function renderMatching(data) {
+    const app = document.getElementById("game-app");
+    app.innerHTML = `
+      <div class="header-bar">
+        <span>第 ${currentIndex + 1} / ${quizQuestions.length} 題</span>
+        <span class="tag">連連看配對</span>
+      </div>
+      <div class="prompt">${data.prompt}</div>
+      <div class="matching-box">
+        <div class="col" id="left-col"></div>
+        <div class="col" id="right-col"></div>
+      </div>
+    `;
+
+    const leftCol = document.getElementById("left-col");
+    const rightCol = document.getElementById("right-col");
+    const shuffledPairs = shuffle(data.pairs);
+    const rightItems = shuffle(data.pairs.map(p => p.right));
+
+    let selectedLeft = null;
+    let selectedRight = null;
+    let pairedCount = 0;
+
+    shuffledPairs.forEach(pair => {
+      const btn = document.createElement("button");
+      btn.className = "item-btn";
+      btn.textContent = pair.left;
+      btn.dataset.match = pair.right;
+      btn.onclick = () => {
+        if (btn.classList.contains("paired")) return;
+        document.querySelectorAll("#left-col .item-btn").forEach(b => b.classList.remove("selected"));
+        btn.classList.add("selected");
+        selectedLeft = btn;
+        checkMatch();
+      };
+      leftCol.appendChild(btn);
+    });
+
+    rightItems.forEach(text => {
+      const btn = document.createElement("button");
+      btn.className = "item-btn";
+      btn.textContent = text;
+      btn.onclick = () => {
+        if (btn.classList.contains("paired")) return;
+        document.querySelectorAll("#right-col .item-btn").forEach(b => b.classList.remove("selected"));
+        btn.classList.add("selected");
+        selectedRight = btn;
+        checkMatch();
+      };
+      rightCol.appendChild(btn);
+    });
+
+    function checkMatch() {
+      if (selectedLeft && selectedRight) {
+        if (selectedLeft.dataset.match === selectedRight.textContent) {
+          selectedLeft.className = "item-btn paired";
+          selectedRight.className = "item-btn paired";
+          selectedLeft = null;
+          selectedRight = null;
+          pairedCount++;
+          if (pairedCount === data.pairs.length) {
+            totalScore++;
+            setTimeout(() => {
+              currentIndex++;
+              renderCurrentQuestion();
+            }, 600);
+          }
+        } else {
+          selectedLeft.classList.remove("selected");
+          selectedRight.classList.remove("selected");
+          selectedLeft = null;
+          selectedRight = null;
+        }
+      }
+    }
+  }
+
+  // 7. 對對碰翻牌介面
+  function renderMemory(data) {
+    const app = document.getElementById("game-app");
+    app.innerHTML = `
+      <div class="header-bar">
+        <span>第 ${currentIndex + 1} / ${quizQuestions.length} 題</span>
+        <span class="tag">翻牌對對碰</span>
+      </div>
+      <div class="prompt">${data.prompt}</div>
+      <div class="grid-container" id="grid"></div>
+    `;
+
+    const grid = document.getElementById("grid");
+    const cards = shuffle([...data.cards, ...data.cards]);
+    let flippedCards = [];
+    let matchedPairs = 0;
+
+    cards.forEach((val) => {
+      const card = document.createElement("div");
+      card.className = "flip-card";
+      card.dataset.val = val;
+      card.textContent = val;
+
+      card.onclick = () => {
+        if (card.classList.contains("open") || card.classList.contains("paired") || flippedCards.length >= 2) return;
+        card.classList.add("open");
+        flippedCards.push(card);
+
+        if (flippedCards.length === 2) {
+          const [c1, c2] = flippedCards;
+          if (c1.dataset.val === c2.dataset.val) {
+            c1.classList.add("paired");
+            c2.classList.add("paired");
+            flippedCards = [];
+            matchedPairs++;
+            if (matchedPairs === data.cards.length) {
+              totalScore++;
+              setTimeout(() => {
+                currentIndex++;
+                renderCurrentQuestion();
+              }, 600);
+            }
+          } else {
+            setTimeout(() => {
+              c1.classList.remove("open");
+              c2.classList.remove("open");
+              flippedCards = [];
+            }, 800);
+          }
+        }
+      };
+      grid.appendChild(card);
+    });
+  }
+
+  // 8. 成果結算畫面
+  function renderGameResult() {
+    const app = document.getElementById("game-app");
+    app.innerHTML = `
+      <div style="text-align: center; padding: 24px 0;">
+        <h2 style="color: #2d3748; margin-bottom: 8px;">🎉 讀本挑戰完成！</h2>
+        <p style="color: #718096; font-size: 16px;">你在本次選書測驗中獲得的成績為：</p>
+        <div style="font-size: 48px; font-weight: bold; color: #3182ce; margin: 16px 0;">
+          ${totalScore} <span style="font-size: 20px; color: #a0aec0;">/ ${quizQuestions.length}</span>
+        </div>
+        <button class="btn-primary" onclick="renderBookSelector()">返回重新選書與挑戰</button>
+      </div>
+    `;
+  }
+
+  loadQuizData();
+</script>
+</body>
+</html>
